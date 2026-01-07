@@ -49,4 +49,4 @@ A Landing Page comunica os diferenciais de um curso planejado para a liderança 
 ---
 
 ## 📄 Créditos e Autoria
-Este projeto foi idealizado, projetado e codificado por **Celso Napoleon**, na qualidade de Docente Proponente dos Cursos de MBA das Faculdades FACCAT.
+Este projeto foi idealizado, projetado e codificado por **Celso Napoleon**, na qualidade de Docente Proponente do Curso de Pós-graduação Lato Sensu de _**MBA em Liderança, Gestão e Governança da Produção e LogísticaÇ**_ das Faculdades FACCAT.
