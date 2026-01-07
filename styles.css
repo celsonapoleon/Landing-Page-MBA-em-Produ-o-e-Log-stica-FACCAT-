@@ -1,0 +1,118 @@
+/* ==========================
+   FACCAT MBA Landing Page (Revisada)
+   Stylesheet (responsive, CRO)
+   ========================== */
+:root {
+  --bg: #0f172a;           /* azul navy profundo */
+  --bg-2: #111827;         /* variação escura */
+  --text: #ffffff;
+  --muted: #cbd5e1;        /* slate */
+  --primary: #eab308;      /* dourado */
+  --secondary: #1f2937;    /* cinza escuro */
+  --accent: #38bdf8;       /* azul claro para detalhes */
+  --card: #0b1220;
+  --success: #16a34a;
+  --error: #ef4444;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  line-height: 1.55;
+  color: var(--text);
+  background: linear-gradient(120deg, var(--bg) 0%, var(--bg-2) 100%);
+}
+.container { width: 100%; max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+/* Header */
+.site-header { position: sticky; top: 0; z-index: 1000; background: rgba(15,23,42,0.8); backdrop-filter: blur(8px); border-bottom: 1px solid rgba(255,255,255,0.08); }
+.header-wrap { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; }
+.brand { color: var(--text); font-weight: 800; letter-spacing: 1px; text-decoration: none; }
+.nav a { color: var(--muted); margin: 0 10px; text-decoration: none; }
+.nav a:hover { color: var(--text); }
+
+/* Buttons */
+.btn { display: inline-block; padding: 12px 18px; border-radius: 8px; text-decoration: none; font-weight: 700; }
+.btn-primary { background: var(--primary); color: #111; }
+.btn-primary:hover { filter: brightness(1.05); }
+.btn-secondary { background: #0ea5e9; color: #001018; }
+.btn-secondary:hover { filter: brightness(1.05); }
+
+/* Hero */
+.hero { position: relative; overflow: hidden; }
+.hero-content { padding: 70px 0 40px; text-align: center; }
+.hero h1 { font-size: clamp(28px, 4vw, 46px); margin: 0 0 10px; }
+.hero .highlight { display: block; margin-top: 8px; color: var(--primary); font-weight: 800; }
+.hero .sub { color: var(--muted); font-size: 18px; }
+.hero-ctas { margin: 18px 0 8px; display: inline-flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+.trust-badges { list-style: none; padding: 0; margin: 16px 0; display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+.trust-badges li { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); color: var(--muted); padding: 8px 12px; border-radius: 999px; font-size: 14px; }
+.slogan { margin-top: 6px; color: var(--muted); font-weight: 700; }
+.hero-bg { position: absolute; inset: 0; background: radial-gradient(60% 80% at 50% 40%, rgba(234,179,8,0.12), rgba(56,189,248,0.06) 30%, transparent 70%); pointer-events: none; }
+
+/* Sections */
+section { padding: 48px 0; }
+section h2 { font-size: clamp(24px, 3vw, 34px); margin: 0 0 14px; }
+
+/* Pain */
+.pain-list { display: grid; grid-template-columns: 1fr; gap: 10px; padding-left: 18px; }
+.pain-list li { background: var(--card); border: 1px solid rgba(255,255,255,0.08); padding: 14px 12px; border-radius: 10px; }
+.pain-foot { color: var(--muted); margin-top: 10px; }
+
+/* Grid cards */
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.card { background: var(--card); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 16px; }
+.card h3 { margin: 0 0 8px; font-size: 18px; }
+.cta-inline { margin-top: 18px; }
+.cta-inline .note { color: var(--muted); font-size: 14px; }
+
+/* Differentials */
+.bullets { list-style: none; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.bullets li { background: var(--card); border: 1px solid rgba(255,255,255,0.08); padding: 14px 12px; border-radius: 10px; }
+
+/* Logistics */
+.facts { list-style: none; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.facts li { background: var(--card); border: 1px solid rgba(255,255,255,0.08); padding: 14px 12px; border-radius: 10px; }
+
+/* Faculty */
+.grid-faculty { grid-template-columns: repeat(3, 1fr); }
+.prof-card { background: var(--card); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; overflow: hidden; display: grid; grid-template-rows: 160px auto; }
+.prof-photo { background-size: cover; background-position: center; height: 160px; }
+.prof-info { padding: 14px; }
+.prof-info h3 { margin: 0 0 6px; font-size: 18px; }
+.prof-info p { margin: 0; color: var(--muted); }
+
+/* CTA */
+.cta { text-align: center; }
+.cta .note { color: var(--muted); }
+
+/* FAQ */
+.faq details { background: var(--card); border: 1px solid rgba(255,255,255,0.08); padding: 12px; border-radius: 10px; margin-bottom: 10px; }
+.faq summary { cursor: pointer; font-weight: 700; }
+
+/* Form */
+.form form { background: var(--card); border: 1px solid rgba(255,255,255,0.08); padding: 16px; border-radius: 12px; }
+.form .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.form label { display: grid; gap: 6px; color: var(--muted); }
+.form input, .form select { padding: 10px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.12); background: #0a0f1a; color: var(--text); }
+.form .lgpd { margin-top: 12px; }
+.form .disclaimer { color: var(--muted); font-size: 12px; }
+.form-message { margin-top: 12px; font-weight: 700; }
+
+/* Footer */
+.footer { border-top: 1px solid rgba(255,255,255,0.08); padding: 24px 0; text-align: center; color: var(--muted); }
+.footer a { color: var(--accent); text-decoration: none; }
+.footer a:hover { text-decoration: underline; }
+
+/* Responsive */
+@media (max-width: 960px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+  .grid-faculty { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px) {
+  .nav { display: none; }
+  .form .grid { grid-template-columns: 1fr; }
+  .bullets, .facts { grid-template-columns: 1fr; }
+  .grid, .grid-faculty { grid-template-columns: 1fr; }
+  .hero-content { padding: 60px 0 30px; }
+}
